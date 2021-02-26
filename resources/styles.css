@@ -26,6 +26,7 @@ nav {
     background-color: #062134;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 
 .logo {
@@ -44,7 +45,7 @@ nav {
     align-items: center;
     width: 100%;
     font-weight: 600;
-    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .option {
@@ -155,4 +156,29 @@ nav {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Banner Rules */
+
+.hero-image {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    background: url(./images/banner-background.jpg) no-repeat center;
+    top: 10vh;
+    background-size: cover;
+    filter: grayscale(10%);
+}
+
+.hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 2.5em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: center;
+    align-items: center;
+
 }
