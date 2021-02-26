@@ -10,6 +10,7 @@ body {
     background-color: #f5f8fa;
     font-size: 18px;
     color: #E5E5E5;
+    
 }
 
 /* Nav Rules */
@@ -52,7 +53,11 @@ nav {
     text-decoration: none;
     color:#E5E5E5;
 }
-
+.last {
+    font-weight: 600;
+    border: 3px solid #E5E5E5;
+    border-radius: 2px;
+}
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -168,6 +173,7 @@ nav {
     top: 10vh;
     background-size: cover;
     filter: grayscale(10%);
+    border-bottom: 15px solid #f5f8fa;
 }
 
 .hero-container {
@@ -180,5 +186,59 @@ nav {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     justify-content: center;
     align-items: center;
+    border-bottom: 10px solid #062134;
+}
 
+/* About Rules */
+section #about {
+    display: flex;
+    min-height: 200vh;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #E5E5E5;
+}
+.about-section {
+    background: url(./images/about-us.jpg) no-repeat left;
+    background-size: 55%;
+    overflow: hidden;
+    padding: 100px;
+    background-color: #062134;
+}
+.about-container {
+    width: 55%;
+    float: right;
+    font-size: 0.75em;
+    background-color: #062134;
+    padding: 100px;
+}
+.about-container h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.three-step {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 1024px) {
+    .about-container {
+        padding: 60px;
+    }
+
+    .about-section {
+        padding: 80px 0px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-section {
+        background-size: 100%;
+    }
+    .about-container {
+        width: 100%;
+        padding: 60px;
+    }
 }
