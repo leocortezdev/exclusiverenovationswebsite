@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="./resources/styles.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <script src="./resources/app.js" defer></script>
+        
         <link rel="apple-touch-icon" sizes="152x152" href="./resources/webicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./resources/webicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="./resources/webicon/favicon-16x16.png">
@@ -23,6 +23,10 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-config" content="./resources/images/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
+        <!-- JS Script links-->
+        <script src="./resources/app.js" defer></script>
+        <script src="https://kit.fontawesome.com/78b1fe43ec.js" crossorigin="anonymous"></script>
+
     </head>
     <body>
     <!-- Navigation Bar-->
@@ -68,7 +72,7 @@
                          To take care of <em>Your</em> needs. Provide excellent <em>Service.</em> 
                          Most importantly to <em>Guarentee</em>.
                         </p>
-                        <figcaption class="">
+                        <figcaption class="no-show">
                             <em>*Final product of a home theater seen on the left*</em>
                         </figcaption>
                         <div class="three-step">
@@ -81,7 +85,94 @@
             </section>
     <!-- Projects Image Gallery Section-->
             <section id="projects">
-                div.project
+                <div class="project-title">
+                    <h1>Projects</h1>
+                </div>   
+                    <div class="project-container">
+                    
+                        <div class="project-images">
+                            <figure class="image-1 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-1.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(1)">
+                            </figure>
+                            <figure class="image-2 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-2.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(2)">
+                            </figure>
+                            <figure class="image-3 gallery-image"> 
+                            <img src="./resources/images/gallery-images/slide-3.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(3)">
+                            </figure>
+                            <figure class="image-4 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-4.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(4)">
+                            </figure>
+                            <figure class="image-5 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-5.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(5)">
+                            </figure>
+                            <figure class="image-6 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-6.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(6)">
+                            </figure>
+                            <figure class="image-7 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-7.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(7)">
+                            </figure>
+                            <figure class="image-8 gallery-image">
+                            <img src="./resources/images/gallery-images/slide-8.jpg" class="gallery-item hover-shadow cursor" onclick="openModal();currentSlide(8)">
+                            </figure>
+                        </div>
+                    </div>
+                <!-- Modal Lightbox Area -->
+                <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-container">
+
+                        <div class="modalSlides">
+                            <div class="numtext">1 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-1.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">2 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-2.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">3 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-3.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">4 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-4.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">5 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-5.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">6 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-6.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">7 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-7.jpg" alt="" class="lightbox-item">
+                        </div>
+
+                        <div class="modalSlides">
+                            <div class="numtext">8 / 8</div>
+                            <img src="./resources/images/gallery-images/slide-8.jpg" alt="" class="lightbox-item">
+                        </div>
+                        
+                        <!-- Modal Controls -->
+                        <a class="prev" onclick="plusSlides(-1)"><i class="fas fa-arrow-alt-circle-left arrow-styles"></i></a> 
+                        <a class="next" onclick="plusSlides(1)"><i class="fas fa-arrow-alt-circle-right arrow-styles"></i>  </a>
+
+                        <!-- Fig Caption -->
+                        <div class="caption-container">
+                            <p id="caption"></p>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
         </main>
     </body>
