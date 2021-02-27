@@ -1,6 +1,6 @@
 
 // Toggle Burger Menu
-function navSlide() {
+ function navSlide() {
     const burger = document.querySelector(".burger");
     const nav = document.querySelector(".nav-links");
     const navLinks = document.querySelectorAll(".nav-links li");
@@ -23,3 +23,55 @@ function navSlide() {
     
 }
 
+ navSlide();
+
+// LightBox/Modal Functionality
+    //Opens Lightbox
+const openModal = () => {
+    document.getElementById("myModal").style.display = "block";
+}
+
+const closeModal = () => {
+    document.getElementById("myModal").style.display = "none";
+}
+
+
+//THE HARD PART :) 
+
+const showSlides = (n) => {
+    let slides = document.getElementsByClassName("modalSlides");
+    let thumbnails = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (let i = 0; i < thumbnails.length; i++) {
+        thumbnails[i].className = thumbnails[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex-1].style.display = "block";
+    thumbnails[slideIndex-1].className += " active";
+    captionText.innerHTML = thumbnails[slideIndex-1].alt;
+}
+
+//Setting default slide param
+let slideIndex = 1;
+showSlides(slideIndex); // invoking the function with our default
+
+// arrow functions 
+const plusSlides = (n) => {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail shortcut
+const currentSlide = (n) => {
+    showSlides(slideIndex = n);
+}
