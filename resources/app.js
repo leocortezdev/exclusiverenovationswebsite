@@ -25,18 +25,22 @@
 
  navSlide();
 
+ 
 // LightBox/Modal Functionality
+let slideIndex = 1;
     //Opens Lightbox
 const openModal = () => {
     document.getElementById("myModal").style.display = "block";
+    document.body.style.overflow = "hidden";
 }
 
 const closeModal = () => {
     document.getElementById("myModal").style.display = "none";
+    document.body.style.overflow= "";
 }
 
 
-//THE HARD PART :) 
+//Slide Controller Function 
 
 const showSlides = (n) => {
     let slides = document.getElementsByClassName("modalSlides");
@@ -63,7 +67,7 @@ const showSlides = (n) => {
 }
 
 //Setting default slide param
-let slideIndex = 1;
+
 showSlides(slideIndex); // invoking the function with our default
 
 // arrow functions 

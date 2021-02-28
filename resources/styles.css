@@ -13,6 +13,16 @@ body {
     
 }
 
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title h1 {
+    font-size: 3em;
+    color: #062134;
+}
+
 /* Nav Rules */
 .logo-container {
     display: flex;
@@ -251,15 +261,10 @@ section #about {
 
 /* Projects Rules */
 
-.project-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#projects {
+    border-bottom: 30px solid #062134;
 }
-.project-title h1 {
-    font-size: 3em;
-    color: #062134;
-}
+
 .project-container {
     width: 80%;
     margin: 2rem auto;
@@ -336,7 +341,7 @@ section #about {
     margin: auto;
     padding: 0;
     width: 90%;
-    max-width: 1200px;
+    max-width: 50vw;
 }
 /* X Button */
 .close {
@@ -372,7 +377,7 @@ section #about {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 /* Btn Positions*/
 .next {
@@ -460,12 +465,88 @@ img.hover-shadow {
         height: 45vh;
     }
 
+    .title h1 {
+        font-size: 1.5em;
+        padding-top: 20px;
+        
+    }
+
+    .caption-container {
+        margin: 1em;
+        font-size: 0.8em;
+    }
+
 }
 
 @media screen and (max-width: 425) {
     
+    .title h1 {
+        font-size: 1.5em;
+        
+    }
+
     .caption-container {
         margin: 1em;
         font-size: 0.8em;
     }
 }
+
+/* Service Rules */
+
+.services-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #062134;
+}
+
+.service {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color:#E5E5E5;
+    color:#062134;
+    transition: 0.3s;
+    flex-direction: column;
+}
+
+div.img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 6px solid #062134;
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center center;
+    margin-bottom: 30px;
+}
+
+.service:nth-child(1) .img-area {
+    background-image: url(./images/service-img-1.jpg)
+}
+
+.service:nth-child(2) .img-area {
+    background-image: url(./images/service-img-2.jpg)
+}
+
+.service:nth-child(3) .img-area {
+    background-image: url(./images/service-img-3.jpg)
+}
+
+.service:hover {
+    background-color: #062134;
+    color:#E5E5E5;
+}
+
+
