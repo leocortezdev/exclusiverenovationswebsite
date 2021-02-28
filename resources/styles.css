@@ -442,13 +442,24 @@ img.hover-shadow {
 /* Modal Media Queries*/
 
 @media screen and (max-width: 1024px) {
+    .modal-container {
+        max-width: 65vw;
+    }
 
     img.demo {
         height: 20vh;
     }
 }
+@media screen and (max-width:768px) {
+    .modal-container {
+        max-width: 80vw;
+    }
+}
+@media screen and (max-width: 767px) {
 
-@media screen and (max-width: 768px) {
+    .modal-container {
+        max-width: 100%;
+    }
 
     img.demo {
         height: 15vh;
@@ -463,6 +474,7 @@ img.hover-shadow {
     }
     .lightbox-item {
         height: 45vh;
+        
     }
 
     .title h1 {
@@ -475,6 +487,7 @@ img.hover-shadow {
         margin: 1em;
         font-size: 0.8em;
     }
+    
 
 }
 
