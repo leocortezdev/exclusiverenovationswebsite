@@ -26,6 +26,11 @@
  navSlide();
 
  
+
+
+
+
+ 
 // LightBox/Modal Functionality
 let slideIndex = 1;
     //Opens Lightbox
@@ -39,13 +44,13 @@ const closeModal = () => {
     document.body.style.overflow= "";
 }
 
-
 //Slide Controller Function 
 
 const showSlides = (n) => {
     let slides = document.getElementsByClassName("modalSlides");
     let thumbnails = document.getElementsByClassName("demo");
     let captionText = document.getElementById("caption");
+
     if (n > slides.length) {
         slideIndex = 1
     }
@@ -79,3 +84,27 @@ const plusSlides = (n) => {
 const currentSlide = (n) => {
     showSlides(slideIndex = n);
 }
+
+
+
+
+// Contact Us Animation 
+
+const inputs = document.querySelectorAll(".input");
+//adds focus class to our input-containers
+function addFocus() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+//removes focus if there is no value in form
+function removeFocus () {
+    let parent = this.parentNode;
+    if (this.value == "") {
+    parent.classList.remove("focus");
+    }
+}
+
+inputs.forEach((input) => {
+    input.addEventListener("focus", addFocus); // note to self. eventlisteners only take in function declarations
+    input.addEventListener("blur", removeFocus);
+})
