@@ -762,6 +762,7 @@ textarea.input {
     font-size: 2em;
     margin-right: 0.9em;
     width: 28px;
+    text-decoration: none;
 }
 
 div.info-section p,
@@ -815,5 +816,31 @@ div.contact-info p {
 /* Footer Rules */
 
 footer {
+    background-color: #062134;
+    padding: 60px 0;
+}
+.footer-logo {
+    margin-right: 2em;
+}
+div.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    flex-wrap: reverse;
+}
+.footer-icon {
+    text-decoration: none;
+    color:#E5E5E5;
+    margin-right: 1.5em;
+    transition: 0.3s;
+}
 
+.social-media-footer a:hover {
+    transform: scale(1.05);
+}
+
+div.content p {
+    font-size: 0.9em;
+    opacity: 0.9;
 }
