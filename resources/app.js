@@ -123,7 +123,7 @@ window.addEventListener("DOMContentLoaded", function() {
       form.reset();
       
       status.style.display = "";
-      status.innerHTML = "Thanks!We'll get in touch soon.";
+      status.innerHTML = "Thanks! We'll get in touch soon.";
     }
 
     function error() {
