@@ -30,7 +30,7 @@
 
 
 
- 
+
 // LightBox/Modal Functionality
 let slideIndex = 1;
     //Opens Lightbox
@@ -108,3 +108,8 @@ inputs.forEach((input) => {
     input.addEventListener("focus", addFocus); // note to self. eventlisteners only take in function declarations
     input.addEventListener("blur", removeFocus);
 })
+
+// RECAPTCHA 
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }

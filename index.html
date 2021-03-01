@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en-us">
     <head>
         <meta charset="utf-8" desc="Exclusive Renovations Carpentry">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,6 +23,7 @@
         <!-- JS Script links-->
         <script src="./resources/app.js" defer></script>
         <script src="https://kit.fontawesome.com/78b1fe43ec.js" crossorigin="anonymous"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
 
     </head>
     <body>
@@ -246,34 +247,35 @@
                     <h1>Contact Us</h1>
                 </div>
                 <div class="container">
-                    <div class="form">
+                    <div class="form" id="form">
                         
                         <div class="contact-info">
                             <h2 class="title">Let's get in touch</h2>
-                            <p class="text">Lorem ipsum dolor sit </p>
+                            <p class="text">Our location, email and phone number:</p>
                         
                             <div class="info-section">
                                 <div class="information">
-                                    <i class="fas fa-map-marked-alt icon"></i>
-                                    <p class="info-text" >Lorem ipsum dolor sit</p>
+                                <a href="https://goo.gl/maps/bTdbC9MQ7nRWcsMD7"class="social-icons"><i class="fas fa-map-marked-alt icon"></i></a>
+                                    <p class="info-text" >10123 NW 46th St
+                                        Sunrise, FL</p>
                                 </div>
                                 <div class="information">
-                                    <i class="fas fa-envelope icon"></i>
-                                    <p class="info-text">Lorem@ipsum.com</p>
+                                <a href="mailto:renovationsexclusive@gmail.com" ><i class="fas fa-envelope icon"></i></a>
+                                    <p class="info-text">renovationsexclusive@gmail.com</p>
                                 </div>
                                 <div class="information">
-                                    <i class="fas fa-phone-square-alt icon"></i>
-                                    <p class="info-text">1-800-lorem</p>
+                                    <a href="tel:9546916886"><i class="fas fa-phone-square-alt icon"></i></a>
+                                    <p class="info-text">(954) 691-6886</p>
                                 </div>
                             </div>
 
                             <div class="social-media">
                                 <p class="text">Connect with us on:</p>
                                 <div class="social-icons">
-                                    <a href="#" class="icon">
+                                    <a href="https://www.facebook.com/exclusiverenovationspage/" class="icon">
                                         <i class="fab fa-facebook-square"></i>
                                     </a>
-                                    <a href="#" class="icon">
+                                    <a href="https://m.me/exclusiverenovationspage" class="icon">
                                         <i class="fab fa-facebook-messenger"></i>
                                     </a>
                                 </div>
@@ -282,7 +284,7 @@
 
                         <div class="contact-form">
                             
-                        <form action="" class="">
+                        <form action="https://formspree.io/f/xknplqdl" method="POST">
                             <div class="input-container">
                                 <input type="text" name="name" class="input" required>
                                 <label for="">Name</label>
@@ -303,7 +305,10 @@
                                 <label for="">Message</label>
                                 <span>Message</span>
                             </div>
-                            <input type="submit" value="Send" class="btn">
+                            <input type="submit" value="Send" class="btn g-recaptcha" 
+                            data-sitekey="6LfkYW0aAAAAADDtbSgXsvsZjptiUdMzDVZSnhlz" 
+                            data-callback='onSubmit' 
+                            data-action='submit'>
 
                         </form>
                     </div>
@@ -319,10 +324,10 @@
                     <a href="#home"><img class="logo" src="./resources/images/ERLogo.png" alt="four polygons that come together to form our company logo"></a>
                 </div>
                     <div class="social-media-footer">
-                        <a href="#" class="footer-icon">
+                        <a href="https://www.facebook.com/exclusiverenovationspage/" class="footer-icon">
                         <i class="fab fa-facebook-square"></i>
                         </a>
-                        <a href="#" class="footer-icon">
+                        <a href="https://m.me/exclusiverenovationspage" class="footer-icon">
                         <i class="fab fa-facebook-messenger"></i>
                         </a>
                     </div>
@@ -330,6 +335,10 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        function onSubmit(token) {
+          document.getElementById("form").submit();
+        }
+      </script>
     </body>
 </html>
