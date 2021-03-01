@@ -235,7 +235,7 @@ section #about {
     justify-content: space-between;
     font-weight: 700;
     margin-top: 30px;
-    font-size: 0.9em;
+    font-size: 1.2em;
 }
 
 
@@ -263,7 +263,11 @@ section #about {
         display: none;
     }
 }
-
+@media screen and (max-width: 425px) {
+    .three-step {
+        font-size: 0.9em;
+    }
+}
 /* Projects Rules */
 
 #projects {
