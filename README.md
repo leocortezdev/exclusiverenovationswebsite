@@ -1,5 +1,6 @@
 # exclusiverenovationswebsite
 A website template designed and created by leocortezdev for a carpentry company
+*FREELANCE WORK*
 
 ## About 
 Using HTML5/CSS3/Javascript to create a project that was designed by myself and then fully incorporated using Figma
