@@ -11,6 +11,10 @@ body {
     font-size: 18px;
     color: #E5E5E5;
     
+    /* For Footer */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .title {
@@ -37,7 +41,7 @@ nav {
     background-color: #062134;
     position: fixed;
     width: 100%;
-    z-index: 9000;
+    z-index: 800;
 }
 
 .logo {
@@ -122,8 +126,8 @@ nav {
     .nav-links {
         position: fixed;
         right: 0px;
-        height: 92vh;
-        top: 8vh;
+        height: 100vh;
+        top: 1vh;
         background-color: #062134;
         display: flex;
         flex-direction: column;
@@ -328,7 +332,7 @@ section #about {
 .modal {
     display: none;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     padding-top: 100px;
     left: 0;
     top: 0;
@@ -566,16 +570,16 @@ div.img-area {
 @media screen and (max-width:475px) {
 
     .service-title {
-        font-size: 0.8em;
-    }
-
-    div.service p {
         font-size: 0.5em;
     }
 
+    div.service p {
+        font-size: 0.7em;
+    }
+
     .service {
-        width: 100px;
-        height: 125px;
+        width: 120px;
+        height: 140px;
     }
     div.img-area {
         display: none;
@@ -802,4 +806,10 @@ div.contact-info p {
     .form {
         grid-template-columns: 1fr;
     }
+}
+
+/* Footer Rules */
+
+footer {
+
 }
