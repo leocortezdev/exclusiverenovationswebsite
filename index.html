@@ -247,7 +247,7 @@
                     <h1>Contact Us</h1>
                 </div>
                 <div class="container">
-                    <div class="form" id="form">
+                    <div class="form">
                         
                         <div class="contact-info">
                             <h2 class="title">Let's get in touch</h2>
@@ -284,7 +284,7 @@
 
                         <div class="contact-form">
                             
-                        <form action="https://formspree.io/f/xknplqdl" method="POST">
+                        <form action="https://formspree.io/f/xknplqdl" method="POST" id="form">
                             <div class="input-container">
                                 <input type="text" name="name" class="input" required>
                                 <label for="">Name</label>
@@ -296,7 +296,7 @@
                                 <span>Phone</span>
                             </div>
                             <div class="input-container">
-                                <input type="email" name="email" class="input" required>
+                                <input type="email" name="_replyto" class="input" required>
                                 <label for="">Email</label>
                                 <span>Email</span>
                             </div>
@@ -305,10 +305,7 @@
                                 <label for="">Message</label>
                                 <span>Message</span>
                             </div>
-                            <input type="submit" value="Send" class="btn g-recaptcha" 
-                            data-sitekey="6LfkYW0aAAAAADDtbSgXsvsZjptiUdMzDVZSnhlz" 
-                            data-callback='onSubmit' 
-                            data-action='submit'>
+                            <button type="submit" class="btn">Send</button>
 
                         </form>
                     </div>
@@ -335,10 +332,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        function onSubmit(token) {
-          document.getElementById("form").submit();
-        }
-      </script>
     </body>
 </html>
