@@ -696,7 +696,9 @@ textarea.input {
     font-size: 0.9em;
     font-weight: 600;
 }
-
+div.btn.show {
+    display: none;
+}
 .btn:hover {
     background-color: transparent;
     color: #E5E5E5;
